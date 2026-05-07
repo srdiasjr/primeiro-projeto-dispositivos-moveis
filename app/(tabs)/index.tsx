@@ -1,32 +1,47 @@
-import {StyleSheet, View, Text, Button} from 'react-native';
-import {useState} from 'react';
+import react from 'react';
+import {View,Text,StyleSheet,Image,ScrollView,TouchableOpacity,TextInput} from 'react-native';
+import { useState } from 'react';
 
-export default function HomeScreen() {
-  const [num, setNum] = useState(0);
-   const [text, setText] = useState("");
-  return (
-      <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
-        <Text>Hello World!</Text>
-        <Button title="+" onPress={() => setNum(num + 1)} />
+export default function Index() {
+  
+    const styles = StyleSheet.create({
+        container: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+        },
+        perfil: {
+            width: 200,
+            height: 200,
+            borderRadius: 100,
+            borderWidth: 1,
+
+            position: 'absolute',
+            top: 110,
+        },
+        inputnome: {
+            width: 200,
+            height: 40,
+            borderRadius: 10,
+            position: 'absolute',
+            top: 350,
+            backgroundColor: '#686B8D',
+            paddingLeft: 15,
+            placeholderTextColor: '#ffffff',
+        },
         
-        <Text>{num}</Text>
+        });
 
-        <Button title="-" onPress={() => setNum(num - 1)} />
-
-        <Button title="Reset" onPress={() => setNum(0)} />
-        
-        {num < 0 && <Text style={{ color: 'red' }}>Negative</Text>}
-        {num > 0 && <Text style={{ color: 'green' }}>Positive</Text>}
-        {num === 0 && <Text style={{ color: 'blue' }}>Zero</Text>}
-        {text.length > 0 && <Text>{text}</Text>}
-        {num === 10 && <Text style={{ color: 'purple' }}>10</Text>}
-
-
-        <input
-        type="text"
-        value={text}
-        onChange={(e) => setText(e.target.value)}  
-        />
-      </View>
-    );
-  }
+    return (
+    <View>
+        <View style={styles.container}>
+                <Image
+                    style={styles.perfil}
+                    source={require('../../assets/images/logo.png')} />
+            </View>
+            <View style={styles.container}>
+                <TextInput placeholder='Digite seu nome de usuario' style={styles.inputnome}/>
+            </View>
+    </View>
+  );
+    }
