@@ -27,7 +27,7 @@ export default function Index() {
             top: 350,
             backgroundColor: '#686B8D',
             paddingLeft: 15,
-            placeholderTextColor: '#ffffff',
+            placeholderTextColor: '#ffffff86',
         },
         
         });
