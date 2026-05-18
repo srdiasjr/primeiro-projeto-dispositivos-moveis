@@ -72,13 +72,11 @@ export default function Index() {
   return (
 
     <View style={styles.container}>
-    {/*Foto de perfil*/}
       <Image
         style={styles.perfil}
         source={require('../../assets/images/logo.png')}
       />
 
-    {/*Input nome de usuario*/}
       <View style={styles.inputContainer}>
 
         <Text style={styles.icone}>👤</Text>
@@ -101,7 +99,7 @@ export default function Index() {
             style={styles.inputsenha}
             />
         </View>
-
+{/* ATENÇAO LUCAS DO FUTURO, nao meche nessa parte, só eu do passado e Deus sabemos como que isso funcionou, eu mesmo ja esqueci ;( */}
         <View style={{ position: 'absolute', top: 470 }}>
             <TouchableOpacity style={styles.botaoentrar}>
                 <Text style={{ color: 'white' }}>Entrar</Text>
